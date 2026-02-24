@@ -18,7 +18,7 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto flex items-center justify-between px-4 py-3">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.jpeg" alt="Bikers Choice Kakinada" className="h-10 w-auto rounded" />
+          <img src="/images/logo.jpeg" alt="Bikers Choice Kakinada" className="h-9 w-9 rounded-full object-cover border border-primary" />
           <span className="font-display text-xl tracking-wider text-primary hidden sm:inline">BIKERS CHOICE</span>
         </Link>
 

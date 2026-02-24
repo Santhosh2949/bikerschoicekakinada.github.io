@@ -18,6 +18,7 @@ const Index = () => {
     <>
       {/* Hero */}
       <section className="relative flex flex-col items-center justify-center text-center px-4 py-24 md:py-36 bg-gradient-to-b from-background via-card to-background">
+        <img src="/images/logo.jpeg" alt="Bikers Choice Kakinada" className="w-24 h-24 sm:w-28 sm:h-28 rounded-full object-cover border-2 border-primary neon-glow mb-6 animate-fade-in-up" />
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl leading-tight neon-text max-w-4xl animate-fade-in-up">
           Premium Bike Modification & Custom Builds in Kakinada
         </h1>
