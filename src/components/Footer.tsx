@@ -8,6 +8,7 @@ const Footer = () => (
   <footer className="bg-card border-t border-border py-10">
     <div className="container mx-auto px-4 grid gap-8 md:grid-cols-3">
       <div>
+        <img src="/images/logo.jpeg" alt="Bikers Choice Kakinada" className="h-14 w-auto rounded mb-3" />
         <h3 className="font-display text-2xl text-primary mb-3">BIKERS CHOICE KAKINADA</h3>
         <p className="text-muted-foreground text-sm leading-relaxed">
           Premium bike modification & custom builds in Kakinada, Andhra Pradesh.

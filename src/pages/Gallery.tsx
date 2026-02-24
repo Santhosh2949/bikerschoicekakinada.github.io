@@ -11,14 +11,17 @@ const categories = [
   "Workshop Shots",
 ];
 
-const items = categories.slice(1).flatMap((cat) =>
-  Array.from({ length: 3 }, (_, i) => ({
-    id: `${cat}-${i}`,
-    category: cat,
-    img: "/placeholder.svg",
-    label: `${cat} ${i + 1}`,
-  }))
-);
+const realImages = [
+  { id: "1", category: "Custom Builds", img: "/images/custom-build-1.png", label: "Custom Build" },
+  { id: "2", category: "Wraps & Paint", img: "/images/wraps-1.png", label: "Wrap Design" },
+  { id: "3", category: "Custom Builds", img: "/images/delivery-1.png", label: "Bike Delivery" },
+  { id: "4", category: "LED & Neon Mods", img: "/images/led-mods-1.png", label: "LED Mod" },
+  { id: "5", category: "Wraps & Paint", img: "/images/custom-paint-1.png", label: "Custom Paint" },
+  { id: "6", category: "Workshop Shots", img: "/images/helmets-1.jpeg", label: "Helmet Collection" },
+  { id: "7", category: "Workshop Shots", img: "/images/workshop-1.jpeg", label: "Workshop" },
+];
+
+const items = realImages;
 
 const Gallery = () => {
   const [active, setActive] = useState("All");

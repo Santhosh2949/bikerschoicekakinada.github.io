@@ -5,12 +5,12 @@ const INSTAGRAM = "https://www.instagram.com/bikers_choice_kakinada?igsh=MXN4NHd
 const WHATSAPP = "https://wa.me/918523876978";
 
 const highlights = [
-  { label: "LED Mods", img: "/placeholder.svg" },
-  { label: "Exhaust Work", img: "/placeholder.svg" },
-  { label: "Custom Paint", img: "/placeholder.svg" },
-  { label: "Wraps", img: "/placeholder.svg" },
-  { label: "Touring Setup", img: "/placeholder.svg" },
-  { label: "Before / After", img: "/placeholder.svg" },
+  { label: "LED Mods", img: "/images/led-mods-1.png" },
+  { label: "Custom Build", img: "/images/custom-build-1.png" },
+  { label: "Custom Paint", img: "/images/custom-paint-1.png" },
+  { label: "Wraps", img: "/images/wraps-1.png" },
+  { label: "Delivery", img: "/images/delivery-1.png" },
+  { label: "Workshop", img: "/images/helmets-1.jpeg" },
 ];
 
 const Index = () => {
