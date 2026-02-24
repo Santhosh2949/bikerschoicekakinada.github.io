@@ -24,7 +24,7 @@ const Contact = () => (
       <InfoCard icon={Instagram} label="Instagram" value="@bikers_choice_kakinada" href={INSTAGRAM} />
       <InfoCard icon={Facebook} label="Facebook" value="Bikers Choice Kakinada" href="#" />
       <InfoCard icon={MapPin} label="Location" value="Kakinada, Andhra Pradesh" href="https://www.google.com/maps?q=16.972073,82.232049" />
-      <InfoCard icon={Clock} label="Hours" value="Mon–Sat: 9 AM – 8 PM · Sun: Closed" />
+      <InfoCard icon={Clock} label="Hours" value="Mon–Sat: 9 AM – 9:30 PM · Sun: 9 AM – 1 PM" />
     </div>
 
     {/* Map */}
