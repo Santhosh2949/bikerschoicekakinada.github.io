@@ -1,11 +1,13 @@
 import { useState } from "react";
-import { Instagram, Phone, MessageCircle, Facebook, Paintbrush, Lightbulb, Compass, Wrench, Truck, CheckCircle, Mail, MapPin, Clock, Package } from "lucide-react";
+import { Instagram, Phone, MessageCircle, Facebook, Paintbrush, Lightbulb, Compass, Wrench, Truck, CheckCircle, Mail, MapPin, Clock, Package, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { highlights, galleryImages, logoPath } from "@/config/photos";
 
 const INSTAGRAM = "https://www.instagram.com/bikers_choice_kakinada?igsh=MXN4NHd0bnRzY2p3dg==";
 const WHATSAPP = "https://wa.me/918523876978";
 const PHONE = "+918523876978";
+const GOOGLE_MAPS_LINK = "https://maps.app.goo.gl/hsZwRRgjuvdUguUTA?g_st=aw";
+const GOOGLE_REVIEW_LINK = "https://maps.app.goo.gl/hsZwRRgjuvdUguUTA?g_st=aw";
 
 const serviceCategories = [
   {
@@ -205,6 +207,29 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ===== REVIEWS ===== */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary/10 via-card to-primary/10">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex justify-center mb-4">
+            <div className="bg-primary/20 p-4 rounded-full">
+              <Star className="text-primary" size={40} />
+            </div>
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl neon-text mb-4">Love Our Work? Leave a Review!</h2>
+          <p className="text-muted-foreground mb-2 text-lg">
+            Your feedback helps us grow and helps other riders find us on Google.
+          </p>
+          <p className="text-sm text-muted-foreground mb-8">
+            Tap below to rate us on Google Maps — it takes less than a minute!
+          </p>
+          <Button asChild size="lg" className="neon-glow text-lg px-8 py-6 font-semibold">
+            <a href={GOOGLE_REVIEW_LINK} target="_blank" rel="noopener noreferrer">
+              <Star className="mr-2" size={20} /> Rate Us on Google ⭐
+            </a>
+          </Button>
+        </div>
+      </section>
+
       {/* ===== CONTACT ===== */}
       <section id="contact" className="py-16 px-4 max-w-3xl mx-auto">
         <h2 className="font-display text-4xl sm:text-5xl neon-text text-center mb-10">Contact Us</h2>
@@ -220,7 +245,7 @@ const Index = () => {
           <InfoCard icon={Mail} label="Email" value="bikerschoicekakinada390@gmail.com" href="mailto:bikerschoicekakinada390@gmail.com" />
           <InfoCard icon={Instagram} label="Instagram" value="@bikers_choice_kakinada" href={INSTAGRAM} />
           <InfoCard icon={Facebook} label="Facebook" value="Bikers Choice Kakinada" href="#" />
-          <InfoCard icon={MapPin} label="Location" value="Kakinada, Andhra Pradesh" href="https://www.google.com/maps?q=16.972073,82.232049" />
+          <InfoCard icon={MapPin} label="Location" value="Kakinada, Andhra Pradesh" href={GOOGLE_MAPS_LINK} />
           <InfoCard icon={Clock} label="Hours" value="Mon–Sat: 9 AM – 9:30 PM · Sun: 9 AM – 1 PM" />
         </div>
         <div className="rounded-lg overflow-hidden border border-border aspect-video">
@@ -230,7 +255,7 @@ const Index = () => {
             height="100%"
             style={{ border: 0 }}
             loading="lazy"
-            src="https://maps.google.com/maps?q=16.972073,82.232049&z=15&output=embed"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3816.5!2d82.232049!3d16.972073!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDU4JzE5LjUiTiA4MsKwMTMnNTUuNCJF!5e0!3m2!1sen!2sin!4v1700000000000"
           />
         </div>
       </section>
