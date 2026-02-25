@@ -18,7 +18,7 @@ const serviceCategories = [
   },
   {
     title: "Parts & Accessories", icon: Wrench,
-    services: ["Tyre fitting & selling", "Brake levers", "Spare parts", "Parts selling"],
+    services: ["Tyre fitting & selling", "Brake levers", "Helmets", "Spare parts", "Parts selling"],
   },
   {
     title: "Touring", icon: Compass,
