@@ -1,18 +1,11 @@
 import { useState } from "react";
-import { Instagram, Phone, MessageCircle, Facebook, Paintbrush, Lightbulb, Gauge, Compass, CheckCircle, Mail, MapPin, Clock } from "lucide-react";
+import { Instagram, Phone, MessageCircle, Facebook, Paintbrush, Lightbulb, Compass, Wrench, Truck, CheckCircle, Mail, MapPin, Clock, Package } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { highlights, galleryImages, logoPath } from "@/config/photos";
 
 const INSTAGRAM = "https://www.instagram.com/bikers_choice_kakinada?igsh=MXN4NHd0bnRzY2p3dg==";
 const WHATSAPP = "https://wa.me/918523876978";
-
-const highlights = [
-  { label: "LED Mods", img: "/images/led-mods-1.png" },
-  { label: "Custom Build", img: "/images/custom-build-1.png" },
-  { label: "Custom Paint", img: "/images/custom-paint-1.png" },
-  { label: "Wraps", img: "/images/wraps-1.png" },
-  { label: "Delivery", img: "/images/delivery-1.png" },
-  { label: "Workshop", img: "/images/helmets-1.jpeg" },
-];
+const PHONE = "+918523876978";
 
 const serviceCategories = [
   {
@@ -24,8 +17,8 @@ const serviceCategories = [
     services: ["LED strips", "Neon underglow", "Headlight upgrades", "Switch integration"],
   },
   {
-    title: "Performance", icon: Gauge,
-    services: ["Exhaust modification", "Air filter tuning"],
+    title: "Parts & Accessories", icon: Wrench,
+    services: ["Tyre fitting & selling", "Brake levers", "Spare parts", "Parts selling"],
   },
   {
     title: "Touring", icon: Compass,
@@ -33,33 +26,24 @@ const serviceCategories = [
   },
 ];
 
-const galleryCategories = ["All", "Before & After", "Custom Builds", "LED & Neon Mods", "Exhaust Work", "Wraps & Paint", "Touring Setups", "Workshop Shots"];
-const realImages = [
-  { id: "1", category: "Custom Builds", img: "/images/custom-build-1.png", label: "Custom Build" },
-  { id: "2", category: "Wraps & Paint", img: "/images/wraps-1.png", label: "Wrap Design" },
-  { id: "3", category: "Custom Builds", img: "/images/delivery-1.png", label: "Bike Delivery" },
-  { id: "4", category: "LED & Neon Mods", img: "/images/led-mods-1.png", label: "LED Mod" },
-  { id: "5", category: "Wraps & Paint", img: "/images/custom-paint-1.png", label: "Custom Paint" },
-  { id: "6", category: "Workshop Shots", img: "/images/helmets-1.jpeg", label: "Helmet Collection" },
-  { id: "7", category: "Workshop Shots", img: "/images/workshop-1.jpeg", label: "Workshop" },
-];
+const galleryCategories = ["All", "Custom Builds", "LED & Neon Mods", "Wraps & Paint", "Touring Setups", "Workshop Shots", "Parts & Tyres"];
 
-const aboutHighlights = ["Premium finishing", "Unique custom builds", "LED & exhaust expertise", "Clean workshop", "Fast delivery", "Friendly customer communication"];
+const aboutHighlights = ["Premium finishing", "Unique custom builds", "LED & lighting expertise", "Clean workshop", "Fast delivery", "Friendly customer communication"];
 
 const Index = () => {
   const [activeGallery, setActiveGallery] = useState("All");
-  const filtered = activeGallery === "All" ? realImages : realImages.filter((i) => i.category === activeGallery);
+  const filtered = activeGallery === "All" ? galleryImages : galleryImages.filter((i) => i.category === activeGallery);
 
   return (
     <>
       {/* ===== HOME ===== */}
       <section id="home" className="relative flex flex-col items-center justify-center text-center px-4 py-24 md:py-36 bg-gradient-to-b from-background via-card to-background">
-        <img src="/images/logo.jpeg" alt="Bikers Choice Kakinada" className="w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover border-2 border-primary neon-glow mb-6 animate-fade-in-up" />
+        <img src={logoPath} alt="Bikers Choice Kakinada" className="w-36 h-36 sm:w-44 sm:h-44 rounded-full object-cover border-2 border-primary neon-glow mb-6 animate-fade-in-up" />
         <h1 className="font-display text-4xl sm:text-5xl md:text-7xl leading-tight neon-text max-w-4xl animate-fade-in-up">
           Premium Bike Modification & Custom Builds in Kakinada
         </h1>
         <p className="mt-4 text-muted-foreground max-w-2xl text-base sm:text-lg animate-fade-in-up" style={{ animationDelay: "0.15s" }}>
-          We create aggressive, premium, custom-styled bikes with performance upgrades, LED mods, exhaust work & precision finishing.
+          We create aggressive, premium, custom-styled bikes with LED mods, custom painting, tyre fitting, spare parts & precision finishing. Online delivery available!
         </p>
         <div className="flex flex-col sm:flex-row gap-4 mt-8 animate-fade-in-up" style={{ animationDelay: "0.3s" }}>
           <Button asChild size="lg" className="neon-glow text-lg px-8 py-6 font-semibold">
@@ -136,6 +120,36 @@ const Index = () => {
               </Button>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* ===== ONLINE DELIVERY ===== */}
+      <section className="py-16 px-4 bg-gradient-to-r from-primary/10 via-card to-primary/10">
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex justify-center mb-4">
+            <div className="bg-primary/20 p-4 rounded-full">
+              <Truck className="text-primary" size={40} />
+            </div>
+          </div>
+          <h2 className="font-display text-3xl sm:text-4xl neon-text mb-4">Online Delivery Available</h2>
+          <p className="text-muted-foreground mb-2 text-lg">
+            We deliver tyres, spare parts, brake levers & accessories across India!
+          </p>
+          <p className="text-sm text-muted-foreground mb-8">
+            <Package className="inline mr-1" size={14} /> Order via WhatsApp or Call — Fast & Secure Shipping
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="neon-glow text-lg px-8 py-6 font-semibold">
+              <a href={WHATSAPP} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2" size={20} /> Order on WhatsApp
+              </a>
+            </Button>
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 border-accent text-accent hover:bg-accent hover:text-accent-foreground font-semibold">
+              <a href={`tel:${PHONE}`}>
+                <Phone className="mr-2" size={20} /> Call to Order
+              </a>
+            </Button>
+          </div>
         </div>
       </section>
 
